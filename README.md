@@ -1,27 +1,27 @@
-# Spaangular
+# SPAAngularDIO
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+# Projeto destinado para teste do Bootcamp da DIO junto a Avanade:
+## 1) Crie uma aplicação Angular (Não esqueça que todo código precisa estar no GitHub)
+#### >> Este aqui!
 
-## Development server
+## 2) Crie no mínimo 3 componentes que deverão estar interagindo na mesma página (Não esqueça das rotas)
+#### >> Além da HOME, crei os componentes de PESSOA, para cadastro e edição, TITLE para incluir o título e RODAPE para colocar uma mensagem fixa sobre o caso.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 3) Escolha no mínimo 4 componentes do Angular Material e incorpore eles em sua aplicação.
+#### >> User os componentes de Icone, Table, Input, Button e Form Field
 
-## Code scaffolding
+## 4) Crie em uma das páginas uma interação através da Interpolação e/ou utilizando Property Biding.
+#### >> Toda interação entre HOME, PESSOA e TITLE utilizam Data Binding ou Propert Biding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 5) Crie uma explicação sobre o que foi feito, esta explicação será inserida na plataforma junto com o link para o código no GitHub.
+#### >> Essa é minha explicação
 
-## Build
+## 6) Você poderá criar um vídeo demonstrativo da aplicação construída, e publicá-lo no YouTube, passando o link de acesso na plataforma. Este passo 6, não é obrigatório, mas entrará como um diferencial. 
+#### >> Infelizmente não tenho conhecimento para gravação de video, então fica para uma próxima
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# PLUS
+## Criei um arquivo json com alguns dados que esta dentro da pasta assets, ele é o mock simulando o banco de dados para popular a table
+### Utilizei o modulos abaixo como extra:
+#### FormMudule, para usar o NgModel.
+#### HttpClientModule, para usar o HttpClient para carregar o json, simulando a API.
+#### Utlizei os packages rxjs, para usar o Observable e Subscribe
