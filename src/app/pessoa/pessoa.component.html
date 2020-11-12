@@ -1,0 +1,20 @@
+<div class="container">
+  <spa-title title="Cadastro/Edição Pessoa"></spa-title>
+
+  <p>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Entre com nome" [(ngModel)]="data.name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Cidade</mat-label>
+      <input matInput placeholder="Entre com a cidade" [(ngModel)]="data.city">
+    </mat-form-field>
+  </p>
+
+  <button mat-raised-button color="primary" style="margin-right: 5px;" (click)="action('SAVE')">Salvar</button>
+  <button mat-raised-button color="primary" (click)="action('BACK')">Voltar</button>
+
+  <spa-rodape></spa-rodape>
+</div>

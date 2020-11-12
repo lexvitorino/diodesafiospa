@@ -1,0 +1,46 @@
+<div class="container">
+
+  <div *ngIf="actionIs === 'LIST'">
+    <spa-title title="HOME"></spa-title>
+
+    <button class="button-top" mat-raised-button color="primary" (click)="action('EDITABLE')">Create</button>
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Search</mat-label>
+      <input matInput type="text" [(ngModel)]="filter">
+      <button mat-button color="accent" *ngIf="filter" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-table class="table mat-elevation-z8" [dataSource]="get()">
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+        <mat-cell *matCellDef="let lesson">{{lesson.id}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+        <mat-cell *matCellDef="let lesson">{{lesson.name}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="city">
+        <mat-header-cell *matHeaderCellDef>City</mat-header-cell>
+        <mat-cell *matCellDef="let lesson">{{lesson.city}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+        <mat-cell *matCellDef="let lesson">
+          <button style="margin-right: 5px;" mat-raised-button color="accent"
+            (click)="action('EDITABLE', lesson)">Edit</button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+
+    <spa-rodape></spa-rodape>
+  </div>
+
+  <div *ngIf="actionIs === 'EDITABLE'">
+    <spa-pessoa [data]="selected" (execute)="outPessoa($event)"></spa-pessoa>
+  </div>
+</div>
